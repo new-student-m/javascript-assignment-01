@@ -1,0 +1,202 @@
+:root {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d1e26;
+}
+* {
+  box-sizing: border-box;
+}
+/* ------------------------------ */
+.container {
+  margin: 0px 20px;
+  padding: 0px 30px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 20;
+}
+.questions-sheet {
+  padding-left: 40px;
+  counter-reset:boxes;
+}
+
+.question-box {
+  min-height: 150px;
+  background-color: #fff;
+  margin-top: 90px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius:20px ;
+  display: flex;
+  position: relative;
+  
+  
+}
+.margin-t-90{
+    margin-top: 90px;
+}
+.margin-b-40{
+  margin-bottom: 40px;
+}
+.question-box::before {
+  counter-increment: boxes;
+  content: counter(boxes);
+  position: absolute;
+  font-size: 1.2rem;
+  left: -62px;
+  top: 40px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #fdbb2d;
+  border-radius: 50%;
+  border: 4px white solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-coloring {
+  width: 6%;
+  background: linear-gradient(45deg, #22c1c3, #fdbb2d);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+.box-content {
+  padding: 0 20px;
+  width: 94%;
+  
+}
+.box-content p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.q-input-1 {
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+.q-input-1:focus {
+  border: none;
+  outline: #099486 2px solid;
+  box-shadow: 0 0 10px 1px #40e0d0;
+}
+.q-output-1 {
+  width: 100%;
+  background-color: #07695f;
+  color: white;
+  margin: 15px 0;
+  padding: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  user-select: none;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+.q-btn-1 {
+  padding: 10px 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #f0a400;
+  color: white;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  display: block;
+  
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.q-btn-1:hover {
+  background-color: #fdbb2d;
+}
+/* ---------------------- calculator --------------------------- */
+.calculator {
+  padding: 20px 0;
+  display: flex;
+    flex-wrap: wrap;
+    
+}
+.border-radius-calculator {
+  border-radius: 20px !important;
+}
+#output-screen{
+  width: 100%;
+    height: 70px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #fff, inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 10px 20px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#output-screen:focus{
+  border: none;
+  outline: 2px solid #099486;
+}
+.calc__circle{
+  width: 25%;
+  margin-bottom: 20px;
+  padding: 0px 5px;
+  user-select: none;
+}
+.calc__circle-big
+{
+  width: 50%;
+  padding: 0px 5px;
+}
+.calculator button
+{
+  width: 100%;
+  height: 48px;
+  background-color: #ecf0f3;
+  box-shadow: -5px -5px 12px #fff, 5px 5px 12px rgba(0,0,0,.16);
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.calculator button:hover
+{
+  background-color: #22c1c3;
+  color: white;
+}
+/* footer */
+footer p {
+  color: rgba(255, 255, 255, 0.541);
+  font-size: 12px;
+}
