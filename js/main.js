@@ -464,7 +464,7 @@ function calculate() {
   calc_arr[0]=Number(calc_arr[0]);
   calc_arr[2]=Number(calc_arr[2]);
   if(calc_arr.length>3){
-    window.alert("Only 3 Characters ! Simple Calculator");
+    window.alert("Only 3 Characters Simple Calculator");
   }
   else if( isNaN(calc_arr[0]) || isNaN(calc_arr[2])){
     window.alert("Just Numbers !");
