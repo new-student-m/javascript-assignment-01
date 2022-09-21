@@ -461,13 +461,15 @@ function del() {
 function calculate() {
   var calc_arr = [];
   calc_arr = output_20.value.split("");
-  calc_arr[0]=parseInt(calc_arr[0]);
-  calc_arr[2]=parseInt(calc_arr[2]);
+  calc_arr[0]=Number(calc_arr[0]);
+  calc_arr[2]=Number(calc_arr[2]);
   if(calc_arr.length>3){
     window.alert("Only 3 Characters ! Simple Calculator");
   }
   else if( isNaN(calc_arr[0]) || isNaN(calc_arr[2])){
     window.alert("Just Numbers !");
+    output_20.value="";
+    return;
   }
   switch (calc_arr[1]) {
     case "+":
@@ -485,5 +487,7 @@ function calculate() {
       case "%":
       output_20.value = calc_arr[0] % calc_arr[2];
       break;
+      default:
+        output_20.value=0;
   }
 }
